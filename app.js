@@ -16,9 +16,7 @@ function login(){
     current = s;
     document.getElementById("studentName").innerText = "أهلاً " + s.name;
     show("dashboard");
-  } else {
-    alert("كود أو باسورد غير صحيح");
-  }
+  } else { alert("كود أو باسورد غير صحيح"); }
 }
 
 /* LOGOUT */
@@ -31,7 +29,6 @@ function logout(){
 function show(id){
   document.querySelectorAll(".container").forEach(d => d.classList.add("hidden"));
   document.getElementById(id).classList.remove("hidden");
-
   if(id==="leaderboard") showLeaderboard();
 }
 
@@ -48,9 +45,9 @@ if(localStorage.getItem('theme')==='light') document.body.classList.add('light')
 function showLeaderboard(){
   const list = document.getElementById("leaderboardList");
   list.innerHTML = "";
-  students.forEach((s,i)=>{
+  students.forEach(s => {
     const li = document.createElement("li");
-    li.innerText = `${s.name}`;
+    li.innerText = s.name;
     list.appendChild(li);
   });
 }
