@@ -43,31 +43,43 @@
 
 <!-- LESSONS -->
 <div id="lessons" class="page hidden">
-  <div class="center-card">
+  <!-- الحصص الرئيسية -->
+  <div id="lessonsMain" class="center-card">
     <h2>📘 الحصص المتاحة</h2>
+    <button onclick="showLesson('lesson1')">1) مقدمة في الأحياء</button>
+    <button onclick="showLesson('lesson2')">2) الدعامة في النبات</button>
+    <button onclick="showLesson('lesson3')">3) الدعامة في الإنسان</button>
+    <button onclick="showPage('dashboard')">⬅ رجوع إلى Dashboard</button>
+  </div>
 
-    <!-- Lesson 1 -->
-    <div class="lesson-card">
-      <h3>1) مقدمة في الأحياء</h3>
-      <button onclick="playVideo('VIDEO_ID_1', this)">▶ تشغيل الفيديو</button>
+  <!-- Lesson 1 -->
+  <div id="lesson1" class="lesson-page hidden">
+    <div class="center-card">
+      <h2>1) مقدمة في الأحياء</h2>
+      <button onclick="toggleVideo('VIDEO_ID_1', this)">▶ تشغيل/إغلاق الفيديو</button>
       <div class="video-container hidden"><iframe allowfullscreen></iframe></div>
+      <button onclick="showPage('lessons')">⬅ رجوع إلى الحصص</button>
     </div>
+  </div>
 
-    <!-- Lesson 2 -->
-    <div class="lesson-card">
-      <h3>2) الدعامة في النبات</h3>
-      <button onclick="playVideo('VIDEO_ID_2', this)">▶ تشغيل الفيديو</button>
+  <!-- Lesson 2 -->
+  <div id="lesson2" class="lesson-page hidden">
+    <div class="center-card">
+      <h2>2) الدعامة في النبات</h2>
+      <button onclick="toggleVideo('VIDEO_ID_2', this)">▶ تشغيل/إغلاق الفيديو</button>
       <div class="video-container hidden"><iframe allowfullscreen></iframe></div>
+      <button onclick="showPage('lessons')">⬅ رجوع إلى الحصص</button>
     </div>
+  </div>
 
-    <!-- Lesson 3 -->
-    <div class="lesson-card">
-      <h3>3) الدعامة في الإنسان</h3>
-      <button onclick="playVideo('VIDEO_ID_3', this)">▶ تشغيل الفيديو</button>
+  <!-- Lesson 3 -->
+  <div id="lesson3" class="lesson-page hidden">
+    <div class="center-card">
+      <h2>3) الدعامة في الإنسان</h2>
+      <button onclick="toggleVideo('VIDEO_ID_3', this)">▶ تشغيل/إغلاق الفيديو</button>
       <div class="video-container hidden"><iframe allowfullscreen></iframe></div>
+      <button onclick="showPage('lessons')">⬅ رجوع إلى الحصص</button>
     </div>
-
-    <button onclick="showPage('dashboard')">⬅ رجوع</button>
   </div>
 </div>
 
