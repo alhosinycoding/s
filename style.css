@@ -32,14 +32,8 @@ body {
   padding: 20px;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  color: var(--main);
-}
+.header { text-align: center; margin-bottom: 20px; }
+.header h1 { color: var(--main); }
 
 .card {
   background: var(--card);
@@ -73,11 +67,7 @@ button {
 }
 button:hover { filter: brightness(1.2); }
 
-.nav {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
+.nav { display: flex; gap: 10px; margin-bottom: 15px; }
 .nav button { flex: 1; font-size: 14px; }
 
 .mode { margin-top: 15px; }
